@@ -1,8 +1,15 @@
+import React from 'react';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList () {
+
+function GalleryList ({gallery}) {
 
     return (
-        <h1>Hello From Gallery List</h1>
+        <div>
+            {gallery.map(item => (
+                <GalleryItem key={item.id} item={item} />
+            ))}
+        </div>
     )
 }
 
